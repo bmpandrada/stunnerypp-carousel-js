@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <title>Carousel</title>
+        <style>
+            .carousel img {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="carousel__title">
+        <h1>StunnerYPP Corporation</h1>
+    </div>
+        <div class="carousel">
+            <img alt="First" src="/img/milky-way-2695569_1280.jpg" />
+            <img alt="Second" src="/img/photo-1680011415159-c0bfef591a0f.avif" />
+            <img alt="Third" src="img/photo-1680079640329-238b05dee3bf.avif" />
+            <img alt="Fourth" src="img/premium_photo-1673835488393-f54cf144d507.avif" />
+            <img alt="Fifth" src="img/thunderstorm-3625405_1280 (1).jpg" />
+        </div>
+    </div>
+        <script>
+            let images = document.querySelectorAll('.carousel img');
+            let index = 0;
+            const CarouselSlider = function() {
+                setInterval(()=>{
+                    images[index].style.display='none';
+                    index = (index + 1) % images.length;
+                    images[index].style.display='block';
+                },1000)
+            }
+            CarouselSlider();
+
+        </script>
+    </body>
+</html>
